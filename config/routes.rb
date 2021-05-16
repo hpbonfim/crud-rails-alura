@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "produtos#index"
   get "produtos/create", to: "produtos#new"
   post "produtos", to: "produtos#create"
+  delete "produtos/:id/remover", to: "produtos#destroy", as: :produto
 end
