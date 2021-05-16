@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    <div class="container">
+        <div class="row g-3">
+            <%= form_for Produto.new do |form| %>
+            <div class="mb-3 row g-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="produto[nome]" placeholder="Digite aqui...">
+            </div>
+            <div class="col-12">
+                <label for="descricao" class="form-label">Descrição</label>
+                <textarea name="produto[descricao]" id="descricao" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="preco" class="form-label">Preço</label>
+                <input type="number" class="form-control" id="preco" name="produto[preco]" placeholder="Digite aqui...">
+            </div>
+            <div class="col-md-6">
+                <label for="quantidade" class="form-label">Quantidade</label>
+                <input type="number" class="form-control" id="quantidade" name="produto[quantidade]" placeholder="Digite aqui...">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</body>
+
+</html>
