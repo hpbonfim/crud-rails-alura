@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>CrudApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -8,9 +9,17 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+    <%= nav_bar brand: "Loja", brand_link: root_url do %>
+    <%= menu_group do %>
+    <%= menu_item "Criar novo produto", produtos_create_path %>
+    <% end %>
+    <% end %>
+    <div class="container text-center">
+        <%= yield %>
+    </div>
+</body>
+
 </html>
